@@ -1,0 +1,49 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "markdown",
+    "injectionSelector": "L:text.html.markdown",
+	"patterns": [
+		{
+			"include": "#image"
+		}
+	],
+	"repository": {
+		"image": {
+            "begin": "{{<|{{%",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.section.embedded.begin.hugo"
+                }
+            },
+            "end": ">}}|%}}",
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.section.embedded.end.hugo"
+                }
+            },
+			"patterns": [{
+                "match": "(\\w+)\\s([a-zA-Z]+)=\\\"(\\S+)\\\"\\s*(?:([a-zA-Z]+)=\\\"(.+)\\\")*",
+                "name": "support.function.hugo",
+                "captures": {
+                    "1": {
+                        "name": "string.other.link.title.markdown"
+                    },
+                    "2": {
+                        "name": "markup.bold.markdown"
+                    },
+                    "3": {
+                        "name": "markup.italic.markdown"
+                    },
+                    "4": {
+                        "name": "markup.bold.markdown"
+                    },
+                    "5": {
+                        "name": "markup.italic.markdown"
+                    }
+                }
+        
+			}]
+		}
+	},
+	"scopeName": "text.markdown.hugo"
+}

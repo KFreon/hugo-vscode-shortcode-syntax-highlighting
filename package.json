@@ -1,0 +1,27 @@
+{
+    "name": "hugo-shortcode-syntax",
+    "displayName": "Hugo Shortcode Syntax",
+    "description": "Enables syntax highlighting for Hugo shortcodes in markdown",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.31.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "hugo",
+            "aliases": ["hugo", "HUGO"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "hugo",
+            "scopeName": "text.markdown.hugo",
+            "path": "./syntaxes/hugo.tmLanguage.json",
+            "injectTo": [
+                "text.html.markdown"
+            ]
+        }]
+    }
+}
