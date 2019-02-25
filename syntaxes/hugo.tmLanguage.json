@@ -22,7 +22,7 @@
                 }
             },
 			"patterns": [{
-                "match": "(\\w+)\\s([a-zA-Z]+)=\\\"(\\S+)\\\"\\s*(?:([a-zA-Z]+)=\\\"(.+)\\\")*",
+                "match": "(\\w+)\\s([a-zA-Z]+)=\\\"(\\S+)\\\"\\s*(?:([a-zA-Z]+)=\\\"([^\"]+)\\\")*",
                 "name": "support.function.hugo.main",
                 "captures": {
                     "1": {
@@ -44,7 +44,7 @@
         
             },
             {
-                "match": "([a-zA-Z]+)\\s\\\"(.+)\\\"",
+                "match": "([a-zA-Z]+)\\s\\\"([^\"]+)\\\"",
                 "name": "support.function.hugo.shorter",
                 "captures": {
                     "1": {
