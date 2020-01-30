@@ -1,5 +1,8 @@
 # Hugo Shortcode Syntax Highlighting  
 
+## Install  
+Install by extracting into the `<user>/.vscode/extensions` directory.  
+
 ## Features  
 Highlights the Hugo Markdown Syntax for Shortcodes, making visual identification easier.  
 For example, some shortcodes are below.  

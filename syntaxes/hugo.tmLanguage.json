@@ -22,40 +22,33 @@
                 }
             },
 			"patterns": [{
-                "match": "(\\w+)\\s([a-zA-Z]+)=\\\"(\\S+)\\\"\\s*(?:([a-zA-Z]+)=\\\"([^\\\"]+)\\\")*",
+                "match": "(/?\\w+)\\s",
                 "name": "support.function.hugo.main",
                 "captures": {
                     "1": {
                         "name": "string.other.link.title.markdown"
-                    },
-                    "2": {
-                        "name": "markup.bold.markdown"
-                    },
-                    "3": {
-                        "name": "markup.italic.markdown"
-                    },
-                    "4": {
-                        "name": "markup.bold.markdown"
-                    },
-                    "5": {
-                        "name": "markup.italic.markdown"
                     }
                 }
-        
             },
             {
-                "match": "([a-zA-Z]+)\\s\\\"([^\\\"]+)\\\"",
-                "name": "support.function.hugo.shorter",
+                "match": "(\\w+)=",
+                "name": "support.function.hugo.params",
                 "captures": {
                     "1": {
-                        "name": "string.other.link.title.markdown"
-                    },
-                    "2": {
+                        "name": "markup.bold.markdown"
+                    }
+                }
+            },
+            {
+                "match": "\"([^\"]+)\"",
+                "name": "support.function.hugo.paraminfo",
+                "captures": {
+                    "1": {
                         "name": "markup.italic.markdown"
                     }
                 }
-            }]
-		}
+            }
+        ]}
 	},
 	"scopeName": "text.markdown.hugo"
 }
