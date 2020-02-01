@@ -9,11 +9,11 @@ This extension add some syntax highlighting for Shortcodes, making visual identi
 For example, some shortcodes are below.  
 
 
-#### Before
-<img src="Hugo_Original.png" width="960">  
+#### Before  
+![Original](Hugo_Original.png)
 
 #### After  
-<img src="Hugo_Demo.png" width="960">
+![New](Hugo_Demo.png)
 
 ## Notes  
 Positional parameters are not really supported. They just get highlighted like the Shortcode name.
