@@ -1,8 +1,5 @@
 # Hugo Shortcode Syntax Highlighting  
 
-## Install  
-Install by extracting into the `<user>/.vscode/extensions` directory.  
-
 ## Features  
 Hugo Shortcodes can get complicated when there's more than one or two parameters.  
 This extension add some syntax highlighting for Shortcodes, making visual identification of individual pieces easier.  
