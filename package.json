@@ -1,13 +1,16 @@
 {
     "name": "hugo-shortcode-syntax",
-    "displayName": "Hugo Shortcode Syntax",
+    "displayName": "Hugo Shortcode Syntax Highlighting",
     "description": "Enables syntax highlighting for Hugo shortcodes in markdown",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "publisher": "kaellarkin",
-    "repository": {"url": "https://kaellarkin@dev.azure.com/kaellarkin/VSCodeExtensions/_git/VSCodeExtensions", "type": "git"},
+    "repository": {"url": "https://github.com/kael-larkin/hugo-vscode-shortcode-syntax-highlighting.git", "type": "git"},
     "engines": {
-        "vscode": "^1.31.0"
+        "vscode": "^1.41.1"
     },
+    "keywords": [
+        "Hugo", "Shortcode"
+    ],
     "categories": [
         "Programming Languages"
     ],
@@ -25,5 +28,6 @@
                 "text.html.markdown"
             ]
         }]
-    }
+    },
+    "icon": "icon.png"
 }
