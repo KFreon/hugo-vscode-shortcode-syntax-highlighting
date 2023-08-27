@@ -4,7 +4,7 @@
     "description": "Enables syntax highlighting for Hugo shortcodes in markdown",
     "version": "1.0.0",
     "publisher": "kaellarkin",
-    "repository": {"url": "https://github.com/kael-larkin/hugo-vscode-shortcode-syntax-highlighting.git", "type": "git"},
+    "repository": {"url": "https://github.com/kfreon/hugo-vscode-shortcode-syntax-highlighting.git", "type": "git"},
     "engines": {
         "vscode": "^1.41.1"
     },
