@@ -6,7 +6,7 @@ const knownShortcodeKey = 'knownShortcodes'
 export async function activate(context: vscode.ExtensionContext) {
     const shortcodeFiles = await vscode.workspace.findFiles("**/layouts/shortcodes/*.html")
     const shortcodes = shortcodeFiles
-        .map(file => file.path.split("/").pop())
+        .map(file => file.path.replace('\\', '/').split('/').pop()) // I can't use ${pathSeparator} ?
         .filter(filePath => filePath !== undefined)
         .map(filePath => filePath!.slice(0, filePath!.length - 5));
 
@@ -30,6 +30,20 @@ class HugoCompletionItemProvider implements vscode.CompletionItemProvider {
         Thenable<vscode.CompletionItem[]> {
             const shortcodes = this.workspaceState.get<string[]>(knownShortcodeKey) ?? []
             const completionItems = shortcodes.map(x => new vscode.CompletionItem(x, vscode.CompletionItemKind.Snippet));
+
+
+
+
+
+            // tag suggestion (another extension)
+            const tagLine = document.lineAt(position.line)
+            if (tagLine.text.startsWith('tags:')) {
+                // suggest tags
+            }
+
+
+            // allow drilldown to shortcode file (this extension)
+
         return Promise.resolve(completionItems);
     }
 }
