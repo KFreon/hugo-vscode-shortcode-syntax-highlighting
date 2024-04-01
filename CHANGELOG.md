@@ -1,7 +1,4 @@
 # Change Log
-All notable changes to the "hugo-shortcode-syntax" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
 ## 2.1.0  
 - Allow "Go to Definition" (F12) on shortcodes
