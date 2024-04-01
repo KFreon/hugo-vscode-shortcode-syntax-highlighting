@@ -16,7 +16,10 @@ For example, some shortcodes are below.
 After typing `%` or `<`, user created Shortcodes are suggested.  
 These are from Themes or user created, specifically `**/layouts/shortcodes/*.html`  
 
-![](Hugo_ShortcodeSuggestions.webm)
+![test](Hugo_ShortcodeSuggestion.gif)
+
+## Goto definition support  
+You can F12 on your custom shortcodes like `{{% collapsible %}}`
 
 ## Notes  
 Positional parameters are not really supported. They just get highlighted like the Shortcode name.
