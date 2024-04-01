@@ -2,7 +2,7 @@
     "name": "hugo-shortcode-syntax",
     "displayName": "Hugo Shortcode Syntax Highlighting",
     "description": "Enables syntax highlighting for Hugo shortcodes in markdown",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "publisher": "kaellarkin",
     "repository": {
         "url": "https://github.com/kfreon/hugo-vscode-shortcode-syntax-highlighting.git",
@@ -60,7 +60,7 @@
     },
     "main": "./out/extension.js",
     "devDependencies": {
-        "@types/vscode": "^1.87.0",
+        "@types/vscode": "^1.41.1",
         "typescript": "^5.4.3"
     }
 }
