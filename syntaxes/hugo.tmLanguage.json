@@ -4,50 +4,52 @@
     "injectionSelector": "L:text.html.markdown",
 	"patterns": [
 		{
-			"include": "#image"
+			"include": "#hugo-syntaxes"
 		}
 	],
 	"repository": {
-		"image": {
-            "begin": "{{<|{{%",
+		"hugo-syntaxes": {
+            "begin": "{{<|{{%|{{-",
             "beginCaptures": {
                 "0": {
                     "name": "punctuation.section.embedded.begin.hugo"
                 }
             },
-            "end": ">}}|%}}",
+            "end": ">}}|%}}|-}}",
             "endCaptures": {
                 "0": {
                     "name": "punctuation.section.embedded.end.hugo"
                 }
             },
-			"patterns": [{
-                "match": "(/?\\w+)\\s",
-                "name": "support.function.hugo.main",
-                "captures": {
-                    "1": {
-                        "name": "string.other.link.title.markdown"
+            "contentName": "hugo-range",
+			"patterns": [
+                {
+                    "match": "(\\w+=)",
+                    "name": "support.function.hugo.params",
+                    "captures": {
+                        "1": {
+                            "name": "markup.bold.markdown"
+                        }
+                    }
+                },
+                {
+                    "match": "\"([^\"]+)\"",
+                    "name": "support.function.hugo.paraminfo",
+                    "captures": {
+                        "1": {
+                            "name": "markup.italic.markdown"
+                        }
+                    }
+                },
+                {
+                    "match": "([\\w\\d/._]+)",
+                    "name": "support.function.hugo.main",
+                    "captures": {
+                        "1": {
+                            "name": "string.other.link.title.markdown"
+                        }
                     }
                 }
-            },
-            {
-                "match": "(\\w+=)",
-                "name": "support.function.hugo.params",
-                "captures": {
-                    "1": {
-                        "name": "markup.bold.markdown"
-                    }
-                }
-            },
-            {
-                "match": "\"([^\"]+)\"",
-                "name": "support.function.hugo.paraminfo",
-                "captures": {
-                    "1": {
-                        "name": "markup.italic.markdown"
-                    }
-                }
-            }
         ]}
 	},
 	"scopeName": "text.markdown.hugo"

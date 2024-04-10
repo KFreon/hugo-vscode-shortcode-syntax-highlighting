@@ -34,12 +34,17 @@
         ],
         "grammars": [
             {
-                "language": "hugo",
                 "scopeName": "text.markdown.hugo",
                 "path": "./syntaxes/hugo.tmLanguage.json",
                 "injectTo": [
                     "text.html.markdown"
-                ]
+                ],
+                "embeddedLanguages": {
+                    "support.function.hugo.params": "hugo",
+                    "support.function.hugo.paraminfo": "hugo",
+                    "support.function.hugo.main": "hugo",
+                    "hugo-range": "hugo"
+                }
             }
         ]
     },
@@ -50,7 +55,9 @@
             "resolveProvider": true,
             "triggerCharacters": [
                 "%",
-                "<"
+                "<",
+                "-",
+                " "
             ]
         }
     },
