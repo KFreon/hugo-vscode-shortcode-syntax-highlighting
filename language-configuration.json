@@ -13,18 +13,14 @@
     ],
     // symbols that are auto closed when typing
     "autoClosingPairs": [
-        ["{", "}"],
-        ["[", "]"],
-        ["(", ")"],
-        ["\"", "\""],
-        ["'", "'"]
+        ["-", "-"],
+        ["%", "%"],
+        // These don't work for some reason
     ],
     // symbols that that can be used to surround a selection
     "surroundingPairs": [
-        ["{", "}"],
-        ["[", "]"],
-        ["(", ")"],
-        ["\"", "\""],
-        ["'", "'"]
+        ["{{%", "%}}"],
+        ["{{<", ">}}"],
+        ["{{-", "-}}"],
     ]
 }

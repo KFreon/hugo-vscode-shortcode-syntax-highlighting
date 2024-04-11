@@ -26,9 +26,8 @@ export async function activate(context: vscode.ExtensionContext) {
     await context.workspaceState.update(knownShortcodeKey, shortcodes);
 
     const provider = new HugoCompletionItemProvider(context.workspaceState);
-    const triggerChars = ['%', '<']
+    const triggerChars = ['%', '<', '-']
 
     context.subscriptions.push(vscode.languages.registerCompletionItemProvider('markdown', provider, ...triggerChars))
-
     context.subscriptions.push(vscode.languages.registerDefinitionProvider('markdown', new HugoDefinitionProvider(context.workspaceState)));
 }

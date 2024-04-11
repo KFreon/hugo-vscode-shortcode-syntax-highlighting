@@ -34,6 +34,7 @@
         ],
         "grammars": [
             {
+                "language": "hugo",
                 "scopeName": "text.markdown.hugo",
                 "path": "./syntaxes/hugo.tmLanguage.json",
                 "injectTo": [
