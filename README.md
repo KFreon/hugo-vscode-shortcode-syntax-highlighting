@@ -13,7 +13,7 @@ For example, some shortcodes are below.
 ![New](Hugo_Demo.png)
 
 ## Shortcode suggestions!  
-After typing `%` or `<`, user created Shortcodes are suggested.  
+After typing `%`, `<`, `-`, user created Shortcodes are suggested.  
 These are from Themes or user created, specifically `**/layouts/shortcodes/*.html`  
 
 ![test](Hugo_ShortcodeSuggestion.gif)

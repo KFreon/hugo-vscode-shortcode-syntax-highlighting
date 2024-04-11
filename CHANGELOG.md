@@ -1,5 +1,8 @@
 # Change Log
 
+## 2.2.0  
+- Add support for `{{--}}` shortcodes  
+
 ## 2.1.0  
 - Allow "Go to Definition" (F12) on shortcodes
 
