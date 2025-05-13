@@ -23,3 +23,8 @@ You can F12 on your custom shortcodes like `{{% collapsible %}}`
 
 ## Notes  
 Positional parameters are not really supported. They just get highlighted like the Shortcode name.
+
+## Publishing (cos I always forget)  
+- `npm install -g @vscode/vsce` 
+- `vcse package`  
+- `vcse publish`

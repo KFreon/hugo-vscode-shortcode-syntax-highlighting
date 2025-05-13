@@ -9,71 +9,59 @@
 	],
 	"repository": {
 		"hugo-syntaxes": {
-            "begin": "{{",
+            "begin": "{{(<|-|%)",
             "beginCaptures": {
                 "0": {
                     "name": "punctuation.section.embedded.begin.hugo"
                 }
             },
-            "end": "}}",
+            "end": "(>|-|%)}}",
             "endCaptures": {
                 "0": {
                     "name": "punctuation.section.embedded.end.hugo"
                 }
             },
             "contentName": "hugo-range",
-			"patterns": [
+            "patterns": [
                 {
-                    "begin": "<|-|%",
-                    "end": ">|-|%",
-                    "beginCaptures": {
-                        "0": {
-                            "name": "punctuation.section.embedded.begin.hugo"
+                    "match": "(\\w+=)",
+                    "name": "support.function.hugo.params",
+                    "comment": "Named parameter. e.g. param in {{< myshortcode param='lol' }}",
+                    "captures": {
+                        "1": {
+                            "name": "markup.bold.markdown"
                         }
-                    },
-                    "endCaptures": {
-                        "0": {
-                            "name": "punctuation.section.embedded.end.hugo"
+                    }
+                },
+                {
+                    "match": "\"([^\"]+)\"",
+                    "name": "support.function.hugo.paraminfo",
+                    "comment": "Value of named parameter. e.g. lol in {{< myshortcode param='lol' }}",
+                    "captures": {
+                        "1": {
+                            "name": "markup.italic.markdown"
                         }
-                    },
-                    "patterns": [
-                        {
-                            "match": "(\\w+=)",
-                            "name": "support.function.hugo.params",
-                            "captures": {
-                                "1": {
-                                    "name": "markup.bold.markdown"
-                                }
-                            }
-                        },
-                        {
-                            "match": "\"([^\"]+)\"",
-                            "name": "support.function.hugo.paraminfo",
-                            "captures": {
-                                "1": {
-                                    "name": "markup.italic.markdown"
-                                }
-                            }
-                        },
-                        {
-                            "match": "`([^`]+)`",
-                            "name": "support.function.hugo.paraminfo",
-                            "captures": {
-                                "1": {
-                                    "name": "markup.italic.markdown"
-                                }
-                            }
-                        },
-                        {
-                            "match": "([\\w\\d/._]+)",
-                            "name": "support.function.hugo.main",
-                            "captures": {
-                                "1": {
-                                    "name": "string.other.link.title.markdown"
-                                }
-                            }
+                    }
+                },
+                {
+                    "match": "`([^`]+)`",
+                    "name": "support.function.hugo.paraminfo",
+                    "comment": "Value of named parameter. e.g. lol in {{< myshortcode param='lol' }}",
+                    "captures": {
+                        "1": {
+                            "name": "markup.italic.markdown"
                         }
-                    ]
+                    }
+                },
+                {
+                    "match": "([\\w\\d/.-_]+)",
+                    "name": "support.function.hugo.main",
+                    "comment": "Shortcode name and unnamed parameters. e.g. myshortcode in {{< myshortcode param='lol' }}",
+                    "captures": {
+                        "1": {
+                            "name": "string.other.link.title.markdown"
+                        }
+                    }
                 }
             ]
         }
